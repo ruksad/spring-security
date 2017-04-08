@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: blog.scarycoders.SimpleAuthenticationApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.674 sec - in blog.scarycoders.SimpleAuthenticationApplicationTests

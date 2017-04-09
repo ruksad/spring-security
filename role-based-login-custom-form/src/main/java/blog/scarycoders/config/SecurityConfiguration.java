@@ -11,7 +11,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 /**
  * Created by mohammad on 8/4/17.
  */
-@Configuration
+
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
@@ -50,10 +50,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     this.mySuccessHandler=mySuccessHandler;
   }
   @Override
-  protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-    auth.inMemoryAuthentication().withUser(userUserName).password(userPassword).roles(userRole);
-    auth.inMemoryAuthentication().withUser(adminUserName).password(adminPassword).roles(adminRole);
-    auth.inMemoryAuthentication().withUser(adminDBAUserName).password(adminDBAPassword).roles(adminRole,adminDbaRole);
+  protected void configure(AuthenticationManagerBuilder authenticationManagerBuilder) throws Exception {
+    authenticationManagerBuilder.inMemoryAuthentication().withUser(userUserName).password(userPassword).roles(userRole);
+    authenticationManagerBuilder.inMemoryAuthentication().withUser(adminUserName).password(adminPassword).roles(adminRole);
+    authenticationManagerBuilder.inMemoryAuthentication().withUser(adminDBAUserName).password(adminDBAPassword).roles(adminRole,adminDbaRole);
   }
 
   @Override

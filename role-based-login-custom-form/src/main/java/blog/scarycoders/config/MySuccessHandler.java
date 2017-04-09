@@ -26,7 +26,7 @@ public class MySuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
   @Override
   protected void handle(HttpServletRequest request, HttpServletResponse response,
       Authentication authentication) throws IOException, ServletException {
-      String targetString=this.determineTargetUrl(authentication);
+      String targetString=this.getLandingPagee(authentication);
 
       redirectStrategy.sendRedirect(request,response,targetString);
   }
@@ -36,7 +36,7 @@ public class MySuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
     * This method extracts the roles of currently logged-in user and returns
     * appropriate URL according to his/her role.
     */
-  protected String determineTargetUrl(Authentication authentication) {
+  protected String getLandingPagee(Authentication authentication) {
     String url = "";
 
     Collection<? extends GrantedAuthority> authorities = authentication.getAuthorities();

@@ -4,7 +4,6 @@
   <groupId>blog.scarycodes</groupId>
   <artifactId>spring-security</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-
   <name>spring-security</name>
   <packaging>pom</packaging>
 
@@ -15,8 +14,25 @@
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
 
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-security</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
   <modules>
     <module>simple-authentication</module>
+    <module>role-based-login-custom-form</module>
   </modules>
 
   <build>
